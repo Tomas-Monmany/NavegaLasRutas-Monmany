@@ -8,7 +8,7 @@ const NavBar = () => {
     <header>
       {/* Logo de la tienda */}
       <div className="logo">
-        <img src={logo} alt="" />
+        <img src={logo} alt="Logo de la pagina" />
       </div>
       {/* Nombre de la tienda */}
       <h1>Suplementos Arnold</h1>
