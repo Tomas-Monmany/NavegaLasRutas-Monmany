@@ -80,16 +80,17 @@ header h1 {
 .cart {
   position: relative;
   cursor: pointer;
+  right: 15px;
 }
 
 .cart-icon {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .cart-notification {
   position: absolute;
   top: -5px;
-  right: -10px;
+  right: -8px;
   background-color: red;
   color: white;
   border-radius: 50%;
