@@ -17,9 +17,9 @@ const NavBar = () => {
         {/* Enlaces de navegación dentro de la página */}
         <ul className="navLinks">
         <li><Link to="/">Inicio</Link></li>
-        <li><Link to="/category/electronics">Electrónica</Link></li>
-        <li><Link to="/category/clothing">Ropa</Link></li>
-        <li><Link to="/category/home">Hogar</Link></li>
+        <li><Link to="/category/proteinas">Proteinas</Link></li>
+        <li><Link to="/category/creatinas">Creatinas</Link></li>
+        <li><Link to="/category/aminoacidos">Aminoacidos</Link></li>
       </ul>
       </nav>
       {/* Carrito de compras con notificación */}

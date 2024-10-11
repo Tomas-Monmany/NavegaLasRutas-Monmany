@@ -7,9 +7,9 @@ const getProducts = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve([
-        { id: 1, name: 'Laptop', category: 'electronics' },
-        { id: 2, name: 'Camisa', category: 'clothing' },
-        { id: 3, name: 'Sofá', category: 'home' }
+        { id: 1, name:  "WHEY PROTEIN TRUE MADE 2.05LBS - ENA SPORT", category: "proteinas" },
+        { id: 2, name: "Creatina Monohidrato 300Grs - Mervick", category: "creatinas" },
+        { id: 3, name: "AMINO GOLD 280Grs - GOLD NUTRITION", category: "aminoacidos" }
       ]);
     }, 2000);
   });
