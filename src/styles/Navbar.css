@@ -1,0 +1,76 @@
+.navbar {
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #e6c07b;
+    border-top: 1px solid #e6c07b;
+  }
+  
+  .logo {
+    display: flex;
+  }
+  .logo img {
+    max-width: 100%;
+    height: 80px;
+    margin: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #e6c07b;
+    border-radius: 100%;
+  }
+  
+  .logo h1 {
+    display: flex;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    height: 15dvh;
+    max-width: 100%;
+    padding: 14px;
+  }
+  
+  .navLinks {
+    list-style: none;
+    border-left: 1px solid #e6c07b;
+  }
+  .navLinks li {
+    padding: 15px;
+  }
+  
+  
+  .link {
+text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px;
+  font-size: larger;
+  gap: 20px;
+  }
+  
+  .link:hover {
+    color: #282828;
+  background-color: #e6c07b;
+  font-weight: bolder;
+  border-radius: 5px;
+  }
+  
+  .cart {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .cart-icon {
+    font-size: 1.8rem;
+  }
+  
+  .cart-notification {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+  }

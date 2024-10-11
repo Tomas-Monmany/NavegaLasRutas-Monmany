@@ -1,0 +1,36 @@
+/* src/styles/ItemListContainer.css */
+.item-list-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .item-list-container h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .category-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .category-link {
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .category-link:hover {
+    background-color: #333;
+    color: white;
+  }
+  

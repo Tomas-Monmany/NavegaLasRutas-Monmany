@@ -1,0 +1,46 @@
+
+.item-detail {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .item-detail h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .item-detail p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .item-detail input {
+    width: 60px;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+  }
+  
+  .item-detail button {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .item-detail button:hover {
+    background-color: #555;
+  }
+  

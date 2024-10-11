@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import CartWidget from "./CartWidget";
 import "../styles/styles.css";
 import logo from "../imagenes/Logo-pagina.png";
@@ -15,22 +16,11 @@ const NavBar = () => {
       <nav className="navbar">
         {/* Enlaces de navegación dentro de la página */}
         <ul className="navLinks">
-          <li>
-            <a href="#products" className="link">
-              Productos
-            </a>
-          </li>
-          <li>
-            <a href="#cart" className="link">
-              Carrito
-            </a>
-          </li>
-          <li>
-            <a href="#checkout" className="link">
-              Checkout
-            </a>
-          </li>
-        </ul>
+        <li><Link to="/">Inicio</Link></li>
+        <li><Link to="/category/electronics">Electrónica</Link></li>
+        <li><Link to="/category/clothing">Ropa</Link></li>
+        <li><Link to="/category/home">Hogar</Link></li>
+      </ul>
       </nav>
       {/* Carrito de compras con notificación */}
       <CartWidget />
