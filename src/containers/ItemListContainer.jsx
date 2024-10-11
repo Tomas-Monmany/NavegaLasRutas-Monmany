@@ -16,7 +16,7 @@ const getProducts = () => {
 };
 
 const ItemListContainer = () => {
-  const { categoryId } = useParams();
+  const { categoryId } = useParams(); // Obtenemos el categoryId desde la URL
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -24,14 +24,13 @@ const ItemListContainer = () => {
       if (categoryId) {
         setProducts(data.filter(product => product.category === categoryId));
       } else {
-        setProducts(data);
+        setProducts(data); // Si no hay categoría, mostrar todos los productos
       }
     });
-  }, [categoryId]);
+  }, [categoryId]); // Agregamos categoryId como dependencia del useEffect
 
   return (
     <div>
-      {/* Solo muestra el título si hay una categoría seleccionada */}
       {categoryId && <h2>Productos de {categoryId}</h2>}
       <ItemList products={products} />
     </div>

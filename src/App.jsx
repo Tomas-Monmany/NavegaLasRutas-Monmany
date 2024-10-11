@@ -3,20 +3,24 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import ItemListContainer from './containers/ItemListContainer';
 import ItemDetailContainer from './containers/ItemDetailContainer';
+import NotFound from './components/NotFound';
 
 const App = () => {
   return (
     <Router>
       <NavBar />
       <Routes>
-        {/* Ruta principal que muestra todas las categorías */}
+        {/* Ruta principal que muestra todos los productos */}
         <Route path="/" element={<ItemListContainer />} />
-        
-        {/* Ruta que muestra los productos de una categoría específica */}
+
+        {/* Ruta dinámica para filtrar por categoría */}
         <Route path="/category/:categoryId" element={<ItemListContainer />} />
-        
-        {/* Ruta que muestra el detalle de un producto */}
+
+        {/* Ruta para ver el detalle de un producto */}
         <Route path="/product/:productId" element={<ItemDetailContainer />} />
+
+        {/* Ruta 404 para manejar errores de navegación */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
