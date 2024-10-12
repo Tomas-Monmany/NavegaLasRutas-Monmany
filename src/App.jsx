@@ -10,7 +10,7 @@ const App = () => {
     <Router>
       <NavBar />
       <Routes>
-        {/* Ruta principal que muestra todos los productos */}
+        {/* Ruta principal para mostrar todos los productos */}
         <Route path="/" element={<ItemListContainer />} />
 
         {/* Ruta dinámica para filtrar por categoría */}
@@ -25,5 +25,4 @@ const App = () => {
     </Router>
   );
 };
-
 export default App;

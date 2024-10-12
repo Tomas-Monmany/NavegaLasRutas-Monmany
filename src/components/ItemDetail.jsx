@@ -4,16 +4,16 @@ import "../styles/styles.css";
 
 const ItemDetail = ({ product }) => {
   const handleAddToCart = (quantity) => {
-    console.log(`Agregaste ${quantity} unidades de ${product.name} al carrito`);
+    console.log(`Agregaste ${quantity} unidad/es de ${product.name} al carrito`);
   };
 
   return (
     <div className="item-detail">
-      <h2>{product.name}</h2>
-      <p>{product.description}</p>
-
+      <h2>{product.name}</h2> {/* Muestra el nombre del producto */}
+      <p>{product.description}</p> {/* Muestra la descripción del producto */}
+      
       {/* Componente ItemCount para manejar la cantidad */}
-      <ItemCount stock={10} initial={1} onAdd={handleAddToCart} />
+      <ItemCount stock={product.stock} initial={1} onAdd={handleAddToCart} />
     </div>
   );
 };

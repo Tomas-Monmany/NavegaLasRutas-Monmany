@@ -16,7 +16,7 @@ const getProducts = () => {
 };
 
 const ItemListContainer = () => {
-  const { categoryId } = useParams(); // Obtenemos el categoryId desde la URL
+  const { categoryId } = useParams(); // Obtener el categoryId desde la URL usando useParams
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -27,11 +27,11 @@ const ItemListContainer = () => {
         setProducts(data); // Si no hay categoría, mostrar todos los productos
       }
     });
-  }, [categoryId]); // Agregamos categoryId como dependencia del useEffect
+  }, [categoryId]); // Agregar categoryId como dependencia del useEffect
 
   return (
     <div>
-      {categoryId && <h2>Productos de {categoryId}</h2>}
+      {categoryId && <h2 className='item-category-title'>Productos de {categoryId}</h2>}
       <ItemList products={products} />
     </div>
   );
