@@ -1,10 +1,10 @@
-import React from 'react';
-import ProductCard from './ProductCard';
+import React from "react";
+import ProductCard from "./ProductCard";
 
 const ItemList = ({ products }) => {
   return (
     <div className="product-list">
-      {products.map(product => (
+      {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
     </div>

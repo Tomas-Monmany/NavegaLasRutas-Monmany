@@ -42,17 +42,16 @@ header h1 {
   text-decoration: none;
   color: #fff;
   font-weight: 700;
-  font-size:x-large;
+  font-size: x-large;
 }
 .navLinks li {
   margin: 20px;
 }
 .navLinks li a {
-    color: #fff;
-    padding: 5px;
-    text-decoration: none;
-  }
-
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+}
 
 .categories {
   display: flex;
@@ -96,114 +95,110 @@ header h1 {
 }
 
 .item-detail {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: white;
-    border: 2px solid #e6c07b;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  .item-detail h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .item-detail p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .item-detail input {
-    width: 60px;
-    padding: 0.5rem;
-    margin: 1rem;
-    text-align: center;
-    font-size: 1.2rem;
-    border: 1px solid #333;
-    border-radius: 5px;
-  }
-  
-  .item-detail button {
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 5px;
-  }
-  
-  .item-detail button:hover {
-    background-color: #555;
-  }
-  
- 
-.item-list-container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .item-list-container h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-  .item-category-title{
-    color:#fff;
-    margin: 15px;
-  }
-  
- .productlist-category h2{
-    color: #fff;
-    margin: 15px;
- }
-  
-.product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-  }
-  
-  .product-card {
-    background-color: white;
-    border: 2px solid #e6c07b;
-    border-radius: 8px;
-    padding: 1.5rem;
-    width: 280px;
-    text-align: center;
-    transition: box-shadow 0.3s ease;
-    margin: 15px;
-  }
-  
-  
-  
-  .product-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .product-card a {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    color: white;
-    background-color: #333;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .product-card a:hover {
-    background-color: #555;
-  }
-  
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border: 2px solid #e6c07b;
+  border-radius: 8px;
+  text-align: center;
+}
 
-  .product-loading-message {
-color: #fff;
-  }
+.item-detail h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.item-detail p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.item-detail input {
+  width: 60px;
+  padding: 0.5rem;
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.item-detail button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
+
+.item-detail button:hover {
+  background-color: #555;
+}
+
+.item-list-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.item-list-container h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.item-category-title {
+  color: #fff;
+  margin: 15px;
+}
+
+.productlist-category h2 {
+  color: #fff;
+  margin: 15px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.product-card {
+  background-color: white;
+  border: 2px solid #e6c07b;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 280px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  margin: 15px;
+}
+
+.product-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.product-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: #333;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.product-card a:hover {
+  background-color: #555;
+}
+
+.product-loading-message {
+  color: #fff;
+}

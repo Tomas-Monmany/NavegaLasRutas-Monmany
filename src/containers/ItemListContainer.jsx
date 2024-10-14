@@ -1,15 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import ItemList from '../components/ItemList';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import ItemList from "../components/ItemList";
 import "../styles/styles.css";
 
 const getProducts = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve([
-        { id: 1, name:  "WHEY PROTEIN TRUE MADE 2.05LBS - ENA SPORT", category: "proteinas" },
-        { id: 2, name: "Creatina Monohidrato 300Grs - Mervick", category: "creatinas" },
-        { id: 3, name: "AMINO GOLD 280Grs - GOLD NUTRITION", category: "aminoacidos" }
+        {
+          id: 1,
+          name: "WHEY PROTEIN TRUE MADE 2.05LBS - ENA SPORT",
+          category: "proteinas",
+        },
+        {
+          id: 2,
+          name: "Creatina Monohidrato 300Grs - Mervick",
+          category: "creatinas",
+        },
+        {
+          id: 3,
+          name: "AMINO GOLD 280Grs - GOLD NUTRITION",
+          category: "aminoacidos",
+        },
       ]);
     }, 2000);
   });
@@ -22,7 +34,7 @@ const ItemListContainer = () => {
   useEffect(() => {
     getProducts().then((data) => {
       if (categoryId) {
-        setProducts(data.filter(product => product.category === categoryId));
+        setProducts(data.filter((product) => product.category === categoryId));
       } else {
         setProducts(data); // Si no hay categoría, mostrar todos los productos
       }
@@ -31,7 +43,9 @@ const ItemListContainer = () => {
 
   return (
     <div>
-      {categoryId && <h2 className='item-category-title'>Productos de {categoryId}</h2>}
+      {categoryId && (
+        <h2 className="item-category-title">Productos de {categoryId}</h2>
+      )}
       <ItemList products={products} />
     </div>
   );
