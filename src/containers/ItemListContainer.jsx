@@ -1,54 +1,44 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import ItemList from "../components/ItemList";
+import React, { useEffect, useState } from 'react';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { useParams } from 'react-router-dom';
+import { db } from '../firebase';
+import ItemList from '../components/ItemList';
 import "../styles/styles.css";
 
-const getProducts = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve([
-        {
-          id: 1,
-          name: "WHEY PROTEIN TRUE MADE 2.05LBS - ENA SPORT",
-          category: "proteinas",
-        },
-        {
-          id: 2,
-          name: "Creatina Monohidrato 300Grs - Mervick",
-          category: "creatinas",
-        },
-        {
-          id: 3,
-          name: "AMINO GOLD 280Grs - GOLD NUTRITION",
-          category: "aminoacidos",
-        },
-      ]);
-    }, 2000);
-  });
-};
-
 const ItemListContainer = () => {
-  const { categoryId } = useParams(); // Obtener el categoryId desde la URL usando useParams
+  const { categoryId } = useParams();
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getProducts().then((data) => {
-      if (categoryId) {
-        setProducts(data.filter((product) => product.category === categoryId));
-      } else {
-        setProducts(data); // Si no hay categoría, mostrar todos los productos
-      }
-    });
-  }, [categoryId]); // Agregar categoryId como dependencia del useEffect
+    const fetchProducts = async () => {
+      setLoading(true);
+      try {
+        const productsRef = collection(db, "products");
+        const productsQuery = categoryId
+          ? query(productsRef, where("category", "==", categoryId))
+          : productsRef;
 
-  return (
-    <div>
-      {categoryId && (
-        <h2 className="item-category-title">Productos de {categoryId}</h2>
-      )}
-      <ItemList products={products} />
-    </div>
-  );
+        const snapshot = await getDocs(productsQuery);
+        const productsList = snapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        setProducts(productsList);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, [categoryId]);
+
+  if (loading) return <p className="product-loading-message">Cargando productos...</p>;
+  if (products.length === 0) return <p className="product-loading-message">No hay productos en esta categoría.</p>;
+
+  return <ItemList products={products} />;
 };
 
 export default ItemListContainer;
