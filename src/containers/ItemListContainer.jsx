@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { collection, getDocs, query, where } from 'firebase/firestore';
-import { useParams } from 'react-router-dom';
-import { db } from '../firebase';
-import ItemList from '../components/ItemList';
+import React, { useEffect, useState } from "react";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { useParams } from "react-router-dom";
+import { db } from "../firebase";
+import ItemList from "../components/ItemList";
 import "../styles/styles.css";
 
 const ItemListContainer = () => {
@@ -20,9 +20,9 @@ const ItemListContainer = () => {
           : productsRef;
 
         const snapshot = await getDocs(productsQuery);
-        const productsList = snapshot.docs.map(doc => ({
+        const productsList = snapshot.docs.map((doc) => ({
           id: doc.id,
-          ...doc.data()
+          ...doc.data(),
         }));
         setProducts(productsList);
       } catch (error) {
@@ -35,8 +35,14 @@ const ItemListContainer = () => {
     fetchProducts();
   }, [categoryId]);
 
-  if (loading) return <p className="product-loading-message">Cargando productos...</p>;
-  if (products.length === 0) return <p className="product-loading-message">No hay productos en esta categoría.</p>;
+  if (loading)
+    return <p className="product-loading-message">Cargando productos...</p>;
+  if (products.length === 0)
+    return (
+      <p className="product-loading-message">
+        No hay productos en esta categoría.
+      </p>
+    );
 
   return <ItemList products={products} />;
 };

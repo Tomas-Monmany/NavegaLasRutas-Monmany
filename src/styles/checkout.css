@@ -1,0 +1,38 @@
+/* Estilos para el componente Checkout */
+.checkout-container {
+  color: #fff; /* Texto en blanco */
+  padding: 2rem;
+  text-align: center;
+}
+
+.checkout-container h2,
+.checkout-container p,
+.checkout-container label {
+  color: #fff; /* Color de texto en blanco para todos los elementos */
+}
+
+.checkout-container input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #fff;
+  background-color: #282828;
+  color: #fff; /* Color de texto en blanco en los inputs */
+  width: 100%;
+}
+
+.checkout-container input::placeholder {
+  color: #ccc; /* Color más claro para el placeholder */
+}
+
+.checkout-container button {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-container button:hover {
+  background-color: #555;
+}

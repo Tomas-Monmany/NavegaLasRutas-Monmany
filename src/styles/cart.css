@@ -1,0 +1,36 @@
+/* Estilos para el componente Cart */
+.cart-container {
+  color: #fff; /* Color de texto en blanco */
+  padding: 2rem;
+  text-align: center;
+}
+
+.cart-container h2,
+.cart-container h3,
+.cart-container p {
+  color: #fff; /* Aplica color blanco a los encabezados y párrafos */
+}
+
+.cart-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-container li {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.cart-container button {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.cart-container button:hover {
+  background-color: #555;
+}

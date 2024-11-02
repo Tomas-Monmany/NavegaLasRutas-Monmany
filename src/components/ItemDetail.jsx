@@ -17,10 +17,15 @@ const ItemDetail = ({ product }) => {
       <h2>{product.name}</h2>
       <p>{product.description}</p>
       <p>Precio: ${product.price}</p>
-      {added ? (
-        <p>Producto agregado al carrito</p>
+
+      {product.stock === 0 ? (
+        <p>Producto sin stock</p>
       ) : (
-        <ItemCount stock={product.stock} initial={1} onAdd={handleAddToCart} />
+        added ? (
+          <p>Producto agregado al carrito</p>
+        ) : (
+          <ItemCount stock={product.stock} initial={1} onAdd={handleAddToCart} />
+        )
       )}
     </div>
   );

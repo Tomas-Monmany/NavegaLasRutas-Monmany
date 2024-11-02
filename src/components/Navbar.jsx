@@ -30,8 +30,9 @@ const NavBar = () => {
           </li>
         </ul>
       </nav>
-      {/* Carrito de compras con notificación */}
-      <CartWidget />
+      <Link to="/cart">
+        <CartWidget />
+      </Link>
     </header>
   );
 };

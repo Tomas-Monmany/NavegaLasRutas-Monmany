@@ -1,16 +1,24 @@
 // src/context/CartContext.js
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from "react";
 
 const CartContext = createContext();
 
 export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  // Inicializar el carrito desde Local Storage o con un array vacío
+  const initialCart = JSON.parse(localStorage.getItem("cart")) || [];
+  const [cart, setCart] = useState(initialCart);
 
+  // Guardar el carrito en Local Storage cada vez que cambie
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
+  // Función para agregar un producto al carrito
   const addToCart = (product, quantity) => {
-    setCart(prevCart => {
-      const itemIndex = prevCart.findIndex(item => item.id === product.id);
+    setCart((prevCart) => {
+      const itemIndex = prevCart.findIndex((item) => item.id === product.id);
       if (itemIndex !== -1) {
         const updatedCart = [...prevCart];
         updatedCart[itemIndex].quantity += quantity;
@@ -20,6 +28,7 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+  // Función para vaciar el carrito
   const clearCart = () => setCart([]);
 
   return (

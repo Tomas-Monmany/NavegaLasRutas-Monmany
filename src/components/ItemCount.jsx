@@ -1,5 +1,4 @@
-// src/components/ItemCount.jsx
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);

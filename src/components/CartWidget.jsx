@@ -1,5 +1,5 @@
 import React from "react";
-import { useCart } from '../context/CartContext';
+import { useCart } from "../context/CartContext";
 import "../styles/styles.css";
 
 const CartWidget = () => {
@@ -9,7 +9,9 @@ const CartWidget = () => {
   return (
     <div className="cart">
       <span className="cart-icon">🛒</span>
-      {totalItems > 0 && <span className="cart-notification">{totalItems}</span>}
+      {totalItems > 0 && (
+        <span className="cart-notification">{totalItems}</span>
+      )}
     </div>
   );
 };
