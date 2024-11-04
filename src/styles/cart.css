@@ -1,6 +1,5 @@
-/* Estilos para el componente Cart */
 .cart-container {
-  color: #fff; /* Color de texto en blanco */
+  color: #fff;
   padding: 2rem;
   text-align: center;
 }
@@ -8,7 +7,7 @@
 .cart-container h2,
 .cart-container h3,
 .cart-container p {
-  color: #fff; /* Aplica color blanco a los encabezados y párrafos */
+  color: #fff;
 }
 
 .cart-container ul {
